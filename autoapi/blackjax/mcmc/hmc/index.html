@@ -41,8 +41,8 @@
   <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/blackjax/mcmc/hmc/index';</script>
@@ -449,31 +449,31 @@ document.write(`
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCState">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HMCState</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">HMCState</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState" title="Link to this definition">#</a></dt>
 <dd><p>State of the HMC algorithm.</p>
 <p>The HMC algorithm takes one position of the chain and returns another
 position. In order to make computations more efficient, we also store
 the current logdensity as well as the current gradient of the logdensity.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCState.position">
-<span class="sig-name descname"><span class="pre">position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState.position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState.position" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState.position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState.position" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCState.logdensity">
-<span class="sig-name descname"><span class="pre">logdensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState.logdensity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState.logdensity" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">logdensity</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState.logdensity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState.logdensity" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCState.logdensity_grad">
-<span class="sig-name descname"><span class="pre">logdensity_grad</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState.logdensity_grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState.logdensity_grad" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">logdensity_grad</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCState.logdensity_grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCState.logdensity_grad" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HMCInfo</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">HMCInfo</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo" title="Link to this definition">#</a></dt>
 <dd><p>Additional information on the HMC transition.</p>
 <p>This additional information can be used for debugging or computing
 diagnostics.</p>
@@ -501,37 +501,37 @@ momentum.</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo.momentum">
-<span class="sig-name descname"><span class="pre">momentum</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.momentum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.momentum" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">momentum</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.momentum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.momentum" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo.acceptance_rate">
-<span class="sig-name descname"><span class="pre">acceptance_rate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.acceptance_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.acceptance_rate" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">acceptance_rate</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.acceptance_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.acceptance_rate" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo.is_accepted">
-<span class="sig-name descname"><span class="pre">is_accepted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.is_accepted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.is_accepted" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">is_accepted</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.is_accepted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.is_accepted" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo.is_divergent">
-<span class="sig-name descname"><span class="pre">is_divergent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.is_divergent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.is_divergent" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">is_divergent</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.is_divergent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.is_divergent" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo.energy">
-<span class="sig-name descname"><span class="pre">energy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.energy" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">energy</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.energy" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo.proposal">
-<span class="sig-name descname"><span class="pre">proposal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.mcmc.integrators.IntegratorState</span></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.proposal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.proposal" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">proposal</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.mcmc.integrators.IntegratorState</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.proposal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.proposal" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.hmc.HMCInfo.num_integration_steps">
-<span class="sig-name descname"><span class="pre">num_integration_steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.num_integration_steps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.num_integration_steps" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">num_integration_steps</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/hmc.html#HMCInfo.num_integration_steps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.hmc.HMCInfo.num_integration_steps" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -723,7 +723,7 @@ By The Blackjax developers
 
   <p class="copyright">
     
-      © Copyright 2025, The Blackjax developers.
+      © Copyright 2026, The Blackjax developers.
       <br/>
     
   </p>

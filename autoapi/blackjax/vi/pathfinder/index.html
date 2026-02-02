@@ -41,8 +41,8 @@
   <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/blackjax/vi/pathfinder/index';</script>
@@ -438,7 +438,7 @@ document.write(`
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.PathfinderState">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PathfinderState</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">PathfinderState</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState" title="Link to this definition">#</a></dt>
 <dd><p>State of the Pathfinder algorithm.</p>
 <p>Pathfinder locates normal approximations to the target density along a
 quasi-Newton optimization path, with local covariance estimated using
@@ -458,32 +458,32 @@ target density.</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.PathfinderState.elbo">
-<span class="sig-name descname"><span class="pre">elbo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></em><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.elbo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.elbo" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">elbo</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.elbo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.elbo" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.PathfinderState.position">
-<span class="sig-name descname"><span class="pre">position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></em><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.position" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.position" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.PathfinderState.grad_position">
-<span class="sig-name descname"><span class="pre">grad_position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></em><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.grad_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.grad_position" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">grad_position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.grad_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.grad_position" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.PathfinderState.alpha">
-<span class="sig-name descname"><span class="pre">alpha</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></em><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.alpha"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.alpha" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">alpha</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.alpha"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.alpha" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.PathfinderState.beta">
-<span class="sig-name descname"><span class="pre">beta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></em><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.beta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.beta" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">beta</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.beta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.beta" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.PathfinderState.gamma">
-<span class="sig-name descname"><span class="pre">gamma</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></em><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.gamma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.gamma" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">gamma</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.Array</span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#PathfinderState.gamma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.PathfinderState.gamma" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -528,7 +528,7 @@ algorithm</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="blackjax.vi.pathfinder.sample">
-<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rng_key:</span> <span class="pre">blackjax.types.PRNGKey</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state:</span> <span class="pre">PathfinderState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_samples:</span> <span class="pre">Union[int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tuple[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tuple[int]]</span> <span class="pre">=</span> <span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">blackjax.types.ArrayTree</span></span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.sample" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rng_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">blackjax.types.PRNGKey</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#blackjax.vi.pathfinder.PathfinderState" title="blackjax.vi.pathfinder.PathfinderState"><span class="pre">PathfinderState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union[int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tuple[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tuple[int]]</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">blackjax.types.ArrayTree</span></span></span><a class="reference internal" href="../../../../_modules/blackjax/vi/pathfinder.html#sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.vi.pathfinder.sample" title="Link to this definition">#</a></dt>
 <dd><p>Draw from the Pathfinder approximation of the target distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -655,7 +655,7 @@ By The Blackjax developers
 
   <p class="copyright">
     
-      © Copyright 2025, The Blackjax developers.
+      © Copyright 2026, The Blackjax developers.
       <br/>
     
   </p>

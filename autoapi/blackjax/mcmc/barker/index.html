@@ -41,8 +41,8 @@
   <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/blackjax/mcmc/barker/index';</script>
@@ -445,7 +445,7 @@ document.write(`
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerState">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BarkerState</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">BarkerState</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState" title="Link to this definition">#</a></dt>
 <dd><p>State of the Barker’s proposal algorithm.</p>
 <p>The Barker algorithm takes one position of the chain and returns another
 position. In order to make computations more efficient, we also store
@@ -453,24 +453,24 @@ the current log-probability density as well as the current gradient of the
 log-probability density.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerState.position">
-<span class="sig-name descname"><span class="pre">position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState.position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState.position" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState.position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState.position" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerState.logdensity">
-<span class="sig-name descname"><span class="pre">logdensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState.logdensity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState.logdensity" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">logdensity</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState.logdensity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState.logdensity" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerState.logdensity_grad">
-<span class="sig-name descname"><span class="pre">logdensity_grad</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState.logdensity_grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState.logdensity_grad" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">logdensity_grad</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">blackjax.types.ArrayTree</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerState.logdensity_grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerState.logdensity_grad" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerInfo">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BarkerInfo</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">BarkerInfo</span></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo" title="Link to this definition">#</a></dt>
 <dd><p>Additional information on the Barker’s proposal kernel transition.</p>
 <p>This additional information can be used for debugging or computing
 diagnostics.</p>
@@ -485,17 +485,17 @@ was returned.</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerInfo.acceptance_rate">
-<span class="sig-name descname"><span class="pre">acceptance_rate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo.acceptance_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo.acceptance_rate" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">acceptance_rate</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo.acceptance_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo.acceptance_rate" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerInfo.is_accepted">
-<span class="sig-name descname"><span class="pre">is_accepted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo.is_accepted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo.is_accepted" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">is_accepted</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo.is_accepted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo.is_accepted" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.barker.BarkerInfo.proposal">
-<span class="sig-name descname"><span class="pre">proposal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#blackjax.mcmc.barker.BarkerState" title="blackjax.mcmc.barker.BarkerState"><span class="pre">BarkerState</span></a></em><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo.proposal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo.proposal" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">proposal</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#blackjax.mcmc.barker.BarkerState" title="blackjax.mcmc.barker.BarkerState"><span class="pre">BarkerState</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/barker.html#BarkerInfo.proposal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.barker.BarkerInfo.proposal" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -656,7 +656,7 @@ By The Blackjax developers
 
   <p class="copyright">
     
-      © Copyright 2025, The Blackjax developers.
+      © Copyright 2026, The Blackjax developers.
       <br/>
     
   </p>
