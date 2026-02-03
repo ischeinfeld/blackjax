@@ -208,8 +208,16 @@ def adjusted_mclmc_proposal(
         return next_state, kinetic_energy + next_kinetic_energy, next_rng_key
 
     def build_trajectory(state, num_integration_steps, rng_key):
+        # Use pcast to convert scalar 0 to match the sharded type expected by fori_loop
+        initial_kinetic_energy = jax.lax.pcast(
+            jnp.array(0.0), ("chains",), to="varying"
+        )
+
         return jax.lax.fori_loop(
-            0 * num_integration_steps, num_integration_steps, step, (state, 0, rng_key)
+            0 * num_integration_steps,
+            num_integration_steps,
+            step,
+            (state, initial_kinetic_energy, rng_key),
         )
 
     def generate(
@@ -240,3 +248,13 @@ def adjusted_mclmc_proposal(
         return sampled_state, info, other_proposal_info
 
     return generate
+
+
+def rescale(mu):
+    """returns s, such that
+     round(U(0, 1) * s + 0.5)
+    has expected value mu.
+    """
+    k = jnp.floor(2 * mu - 1)
+    x = k * (mu - 0.5 * (k + 1)) / (k + 1 - mu)
+    return k + x
