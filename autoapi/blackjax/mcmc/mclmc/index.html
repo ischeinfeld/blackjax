@@ -189,6 +189,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../adaptation/adjusted_mclmc_adaptation/index.html">blackjax.adaptation.adjusted_mclmc_adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../adaptation/base/index.html">blackjax.adaptation.base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../adaptation/chees_adaptation/index.html">blackjax.adaptation.chees_adaptation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../adaptation/laps/index.html">blackjax.adaptation.laps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../adaptation/laps_burn_in/index.html">blackjax.adaptation.laps_burn_in</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../adaptation/mass_matrix/index.html">blackjax.adaptation.mass_matrix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../adaptation/mclmc_adaptation/index.html">blackjax.adaptation.mclmc_adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../adaptation/meads_adaptation/index.html">blackjax.adaptation.meads_adaptation</a></li>
@@ -383,6 +385,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.logdensity"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.logdensity</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.kinetic_change"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.kinetic_change</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.energy_change"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.energy_change</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.nonans"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.nonans</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
@@ -459,6 +462,11 @@ document.write(`
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blackjax.mcmc.mclmc.MCLMCInfo.energy_change">
 <span class="sig-name descname"><span class="pre">energy_change</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/mclmc.html#MCLMCInfo.energy_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.mclmc.MCLMCInfo.energy_change" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blackjax.mcmc.mclmc.MCLMCInfo.nonans">
+<span class="sig-name descname"><span class="pre">nonans</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><a class="reference internal" href="../../../../_modules/blackjax/mcmc/mclmc.html#MCLMCInfo.nonans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blackjax.mcmc.mclmc.MCLMCInfo.nonans" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -586,6 +594,7 @@ users only need to pass <cite>blackjax.mclmc</cite> to SMC, adaptation, etc. alg
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.logdensity"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.logdensity</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.kinetic_change"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.kinetic_change</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.energy_change"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.energy_change</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.MCLMCInfo.nonans"><code class="docutils literal notranslate"><span class="pre">MCLMCInfo.nonans</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blackjax.mcmc.mclmc.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>

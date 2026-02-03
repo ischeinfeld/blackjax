@@ -188,6 +188,8 @@
 <li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/adjusted_mclmc_adaptation/index.html">blackjax.adaptation.adjusted_mclmc_adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/base/index.html">blackjax.adaptation.base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/chees_adaptation/index.html">blackjax.adaptation.chees_adaptation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/laps/index.html">blackjax.adaptation.laps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/laps_burn_in/index.html">blackjax.adaptation.laps_burn_in</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/mass_matrix/index.html">blackjax.adaptation.mass_matrix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/mclmc_adaptation/index.html">blackjax.adaptation.mclmc_adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/blackjax/adaptation/meads_adaptation/index.html">blackjax.adaptation.meads_adaptation</a></li>
@@ -423,12 +425,24 @@ document.write(`
         <li><a href="autoapi/blackjax/mcmc/random_walk/index.html#blackjax.mcmc.random_walk.RWInfo.acceptance_rate">(RWInfo attribute)</a>
 </li>
       </ul></li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation">Adaptation (class in blackjax.adaptation.laps)</a>
+
+      <ul>
+        <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation">(class in blackjax.adaptation.laps_burn_in)</a>
+</li>
+      </ul></li>
       <li><a href="autoapi/blackjax/adaptation/base/index.html#blackjax.adaptation.base.AdaptationInfo.adaptation_state">adaptation_state (AdaptationInfo attribute)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/base/index.html#blackjax.adaptation.base.AdaptationInfo">AdaptationInfo (class in blackjax.adaptation.base)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/base/index.html#blackjax.adaptation.base.AdaptationResults">AdaptationResults (class in blackjax.adaptation.base)</a>
 </li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.AdaptationState">AdaptationState (class in blackjax.adaptation.laps)</a>
+
+      <ul>
+        <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState">(class in blackjax.adaptation.laps_burn_in)</a>
+</li>
+      </ul></li>
       <li><a href="autoapi/blackjax/mcmc/random_walk/index.html#blackjax.mcmc.random_walk.additive_step_random_walk">additive_step_random_walk() (in module blackjax.mcmc.random_walk)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/adjusted_mclmc_adaptation/index.html#blackjax.adaptation.adjusted_mclmc_adaptation.adjusted_mclmc_find_L_and_step_size">adjusted_mclmc_find_L_and_step_size() (in module blackjax.adaptation.adjusted_mclmc_adaptation)</a>
@@ -437,9 +451,11 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/adaptation/adjusted_mclmc_adaptation/index.html#blackjax.adaptation.adjusted_mclmc_adaptation.adjusted_mclmc_make_L_step_size_adaptation">adjusted_mclmc_make_L_step_size_adaptation() (in module blackjax.adaptation.adjusted_mclmc_adaptation)</a>
 </li>
-      <li><a href="autoapi/blackjax/adaptation/meads_adaptation/index.html#blackjax.adaptation.meads_adaptation.MEADSAdaptationState.alpha">alpha (MEADSAdaptationState attribute)</a>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.alpha">alpha (Adaptation attribute)</a>
 
       <ul>
+        <li><a href="autoapi/blackjax/adaptation/meads_adaptation/index.html#blackjax.adaptation.meads_adaptation.MEADSAdaptationState.alpha">(MEADSAdaptationState attribute)</a>
+</li>
         <li><a href="autoapi/blackjax/vi/pathfinder/index.html#blackjax.vi.pathfinder.PathfinderState.alpha">(PathfinderState attribute)</a>
 </li>
       </ul></li>
@@ -535,6 +551,10 @@ document.write(`
       </ul></li>
       <li><a href="autoapi/blackjax/vi/pathfinder/index.html#blackjax.vi.pathfinder.PathfinderState.beta">beta (PathfinderState attribute)</a>
 </li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.bias">bias() (in module blackjax.adaptation.laps)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.bias_type">bias_type (Adaptation attribute)</a>
+</li>
       <li>
     blackjax
 
@@ -568,6 +588,20 @@ document.write(`
 
       <ul>
         <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#module-blackjax.adaptation.chees_adaptation">module</a>
+</li>
+      </ul></li>
+      <li>
+    blackjax.adaptation.laps
+
+      <ul>
+        <li><a href="autoapi/blackjax/adaptation/laps/index.html#module-blackjax.adaptation.laps">module</a>
+</li>
+      </ul></li>
+      <li>
+    blackjax.adaptation.laps_burn_in
+
+      <ul>
+        <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#module-blackjax.adaptation.laps_burn_in">module</a>
 </li>
       </ul></li>
       <li>
@@ -787,6 +821,8 @@ document.write(`
         <li><a href="autoapi/blackjax/sgmcmc/diffusions/index.html#module-blackjax.sgmcmc.diffusions">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     blackjax.sgmcmc.gradients
 
@@ -794,8 +830,6 @@ document.write(`
         <li><a href="autoapi/blackjax/sgmcmc/gradients/index.html#module-blackjax.sgmcmc.gradients">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     blackjax.sgmcmc.sghmc
 
@@ -977,9 +1011,11 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/mcmc/rmhmc/index.html#blackjax.mcmc.rmhmc.build_kernel">build_kernel (in module blackjax.mcmc.rmhmc)</a>
 </li>
-      <li><a href="autoapi/blackjax/mcmc/adjusted_mclmc/index.html#blackjax.mcmc.adjusted_mclmc.build_kernel">build_kernel() (in module blackjax.mcmc.adjusted_mclmc)</a>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.build_kernel">build_kernel() (in module blackjax.adaptation.laps_burn_in)</a>
 
       <ul>
+        <li><a href="autoapi/blackjax/mcmc/adjusted_mclmc/index.html#blackjax.mcmc.adjusted_mclmc.build_kernel">(in module blackjax.mcmc.adjusted_mclmc)</a>
+</li>
         <li><a href="autoapi/blackjax/mcmc/adjusted_mclmc_dynamic/index.html#blackjax.mcmc.adjusted_mclmc_dynamic.build_kernel">(in module blackjax.mcmc.adjusted_mclmc_dynamic)</a>
 </li>
         <li><a href="autoapi/blackjax/mcmc/barker/index.html#blackjax.mcmc.barker.build_kernel">(in module blackjax.mcmc.barker)</a>
@@ -1043,6 +1079,8 @@ document.write(`
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.C">C (Adaptation attribute)</a>
+</li>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.chees_adaptation">chees_adaptation() (in module blackjax.adaptation.chees_adaptation)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.ChEESAdaptationState">ChEESAdaptationState (class in blackjax.adaptation.chees_adaptation)</a>
@@ -1051,13 +1089,17 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.compute_log_persistent_weights">compute_log_persistent_weights() (in module blackjax.smc.persistent_sampling)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.compute_log_Z">compute_log_Z() (in module blackjax.smc.persistent_sampling)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.compute_persistent_ess">compute_persistent_ess() (in module blackjax.smc.persistent_sampling)</a>
 </li>
       <li><a href="autoapi/blackjax/sgmcmc/csgld/index.html#blackjax.sgmcmc.csgld.ContourSGLDState">ContourSGLDState (class in blackjax.sgmcmc.csgld)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.contract">contract (Adaptation attribute)</a>, <a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.contract">[1]</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.contract_history">contract_history() (in module blackjax.adaptation.laps_burn_in)</a>
 </li>
       <li><a href="autoapi/blackjax/sgmcmc/gradients/index.html#blackjax.sgmcmc.gradients.control_variates">control_variates() (in module blackjax.sgmcmc.gradients)</a>
 </li>
@@ -1107,6 +1149,10 @@ document.write(`
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState.EEVPD">EEVPD (AdaptationState attribute)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState.EEVPD_wanted">EEVPD_wanted (AdaptationState attribute)</a>
+</li>
       <li><a href="autoapi/blackjax/diagnostics/index.html#blackjax.diagnostics.effective_sample_size">effective_sample_size() (in module blackjax.diagnostics)</a>
 </li>
       <li><a href="autoapi/blackjax/vi/meanfield_vi/index.html#blackjax.vi.meanfield_vi.MFVIInfo.elbo">elbo (MFVIInfo attribute)</a>
@@ -1127,15 +1173,25 @@ document.write(`
         <li><a href="autoapi/blackjax/mcmc/proposal/index.html#blackjax.mcmc.proposal.Proposal.energy">(Proposal attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/mcmc/mclmc/index.html#blackjax.mcmc.mclmc.MCLMCInfo.energy_change">energy_change (MCLMCInfo attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/sgmcmc/csgld/index.html#blackjax.sgmcmc.csgld.ContourSGLDState.energy_idx">energy_idx (ContourSGLDState attribute)</a>
 </li>
       <li><a href="autoapi/blackjax/sgmcmc/csgld/index.html#blackjax.sgmcmc.csgld.ContourSGLDState.energy_pdf">energy_pdf (ContourSGLDState attribute)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.EPS_FLOAT">EPS_FLOAT (in module blackjax.adaptation.chees_adaptation)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.epsadap_update">epsadap_update (Adaptation attribute)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.equipartition_diagonal">equipartition_diagonal() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.equipartition_diagonal_loss">equipartition_diagonal_loss() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.equipartition_fullrank">equipartition_fullrank() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.equipartition_fullrank_loss">equipartition_fullrank_loss() (in module blackjax.adaptation.laps_burn_in)</a>
 </li>
       <li><a href="autoapi/blackjax/smc/pretuning/index.html#blackjax.smc.pretuning.esjd">esjd() (in module blackjax.smc.pretuning)</a>
 </li>
@@ -1191,8 +1247,12 @@ document.write(`
         <li><a href="autoapi/blackjax/adaptation/mclmc_adaptation/index.html#blackjax.adaptation.mclmc_adaptation.handle_nans">(in module blackjax.adaptation.mclmc_adaptation)</a>
 </li>
       </ul></li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState.history">history (AdaptationState attribute)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.History">History (class in blackjax.adaptation.laps_burn_in)</a>
+</li>
       <li><a href="autoapi/blackjax/mcmc/trajectory/index.html#blackjax.mcmc.trajectory.hmc_energy">hmc_energy() (in module blackjax.mcmc.trajectory)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/hmc/index.html#blackjax.mcmc.hmc.HMCInfo">HMCInfo (class in blackjax.mcmc.hmc)</a>
@@ -1275,9 +1335,15 @@ document.write(`
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/blackjax/adaptation/mass_matrix/index.html#blackjax.adaptation.mass_matrix.MassMatrixAdaptationState.inverse_mass_matrix">inverse_mass_matrix (MassMatrixAdaptationState attribute)</a>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.initial_state">initial_state (Adaptation attribute)</a>, <a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.initial_state">[1]</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.initialize">initialize() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState.inverse_mass_matrix">inverse_mass_matrix (AdaptationState attribute)</a>
 
       <ul>
+        <li><a href="autoapi/blackjax/adaptation/mass_matrix/index.html#blackjax.adaptation.mass_matrix.MassMatrixAdaptationState.inverse_mass_matrix">(MassMatrixAdaptationState attribute)</a>
+</li>
         <li><a href="autoapi/blackjax/adaptation/mclmc_adaptation/index.html#blackjax.adaptation.mclmc_adaptation.MCLMCAdaptationState.inverse_mass_matrix">(MCLMCAdaptationState attribute)</a>
 </li>
         <li><a href="autoapi/blackjax/adaptation/pathfinder_adaptation/index.html#blackjax.adaptation.pathfinder_adaptation.PathfinderAdaptationState.inverse_mass_matrix">(PathfinderAdaptationState attribute)</a>
@@ -1317,8 +1383,12 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/mcmc/integrators/index.html#blackjax.mcmc.integrators.isokinetic_yoshida">isokinetic_yoshida (in module blackjax.mcmc.integrators)</a>
 </li>
-      <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.PersistentSMCState.iteration">iteration (PersistentSMCState attribute)</a>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.AdaptationState.iteration">iteration (AdaptationState attribute)</a>
+
+      <ul>
+        <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.PersistentSMCState.iteration">(PersistentSMCState attribute)</a>
 </li>
+      </ul></li>
       <li><a href="autoapi/blackjax/mcmc/termination/index.html#blackjax.mcmc.termination.iterative_uturn_numpyro">iterative_uturn_numpyro() (in module blackjax.mcmc.termination)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/termination/index.html#blackjax.mcmc.termination.IterativeUTurnState">IterativeUTurnState (class in blackjax.mcmc.termination)</a>
@@ -1337,7 +1407,13 @@ document.write(`
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/blackjax/adaptation/mclmc_adaptation/index.html#blackjax.adaptation.mclmc_adaptation.MCLMCAdaptationState.L">L (MCLMCAdaptationState attribute)</a>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState.L">L (AdaptationState attribute)</a>
+
+      <ul>
+        <li><a href="autoapi/blackjax/adaptation/mclmc_adaptation/index.html#blackjax.adaptation.mclmc_adaptation.MCLMCAdaptationState.L">(MCLMCAdaptationState attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.laps">laps() (in module blackjax.adaptation.laps)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/trajectory/index.html#blackjax.mcmc.trajectory.Trajectory.leftmost_state">leftmost_state (Trajectory attribute)</a>
 </li>
@@ -1462,6 +1538,10 @@ document.write(`
         <li><a href="autoapi/blackjax/adaptation/base/index.html#module-blackjax.adaptation.base">blackjax.adaptation.base</a>
 </li>
         <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#module-blackjax.adaptation.chees_adaptation">blackjax.adaptation.chees_adaptation</a>
+</li>
+        <li><a href="autoapi/blackjax/adaptation/laps/index.html#module-blackjax.adaptation.laps">blackjax.adaptation.laps</a>
+</li>
+        <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#module-blackjax.adaptation.laps_burn_in">blackjax.adaptation.laps_burn_in</a>
 </li>
         <li><a href="autoapi/blackjax/adaptation/mass_matrix/index.html#module-blackjax.adaptation.mass_matrix">blackjax.adaptation.mass_matrix</a>
 </li>
@@ -1614,11 +1694,25 @@ document.write(`
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.nan_reject">nan_reject() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.ndims">ndims (Adaptation attribute)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.no_nans">no_nans() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+      <li><a href="autoapi/blackjax/mcmc/mclmc/index.html#blackjax.mcmc.mclmc.MCLMCInfo.nonans">nonans (MCLMCInfo attribute)</a>
+</li>
       <li><a href="autoapi/blackjax/mcmc/proposal/index.html#blackjax.mcmc.proposal.nonreversible_slice_sampling">nonreversible_slice_sampling() (in module blackjax.mcmc.proposal)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.norm_factor">norm_factor (Adaptation attribute)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/random_walk/index.html#blackjax.mcmc.random_walk.normal">normal() (in module blackjax.mcmc.random_walk)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/mcmc/random_walk/index.html#blackjax.mcmc.random_walk.normal_random_walk">normal_random_walk() (in module blackjax.mcmc.random_walk)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.num_adaptation_samples">num_adaptation_samples (Adaptation attribute)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/hmc/index.html#blackjax.mcmc.hmc.HMCInfo.num_integration_steps">num_integration_steps (HMCInfo attribute)</a>
 
@@ -1626,8 +1720,6 @@ document.write(`
         <li><a href="autoapi/blackjax/mcmc/nuts/index.html#blackjax.mcmc.nuts.NUTSInfo.num_integration_steps">(NUTSInfo attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.PersistentSMCState.num_particles">num_particles (PersistentSMCState property)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/trajectory/index.html#blackjax.mcmc.trajectory.Trajectory.num_states">num_states (Trajectory attribute)</a>
@@ -1642,14 +1734,22 @@ document.write(`
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.observables">observables (Adaptation attribute)</a>, <a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.observables">[1]</a>
+
+      <ul>
+        <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.History.observables">(History attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.observables_for_bias">observables_for_bias (Adaptation attribute)</a>, <a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.observables_for_bias">[1]</a>
+</li>
       <li><a href="autoapi/blackjax/mcmc/integrators/index.html#blackjax.mcmc.integrators.omelyan">omelyan (in module blackjax.mcmc.integrators)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/vi/meanfield_vi/index.html#blackjax.vi.meanfield_vi.MFVIState.opt_state">opt_state (MFVIState attribute)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.ChEESAdaptationState.optim_state">optim_state (ChEESAdaptationState attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.OPTIMAL_TARGET_ACCEPTANCE_RATE">OPTIMAL_TARGET_ACCEPTANCE_RATE (in module blackjax.adaptation.chees_adaptation)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/diffusions/index.html#blackjax.mcmc.diffusions.overdamped_langevin">overdamped_langevin() (in module blackjax.mcmc.diffusions)</a>
@@ -1772,6 +1872,8 @@ document.write(`
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.r_end">r_end (Adaptation attribute)</a>
+</li>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.ChEESAdaptationState.random_generator_arg">random_generator_arg (ChEESAdaptationState attribute)</a>
 
       <ul>
@@ -1786,10 +1888,10 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.resample_from_persistent">resample_from_persistent() (in module blackjax.smc.persistent_sampling)</a>
 </li>
-      <li><a href="autoapi/blackjax/smc/resampling/index.html#blackjax.smc.resampling.residual">residual() (in module blackjax.smc.resampling)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/blackjax/smc/resampling/index.html#blackjax.smc.resampling.residual">residual() (in module blackjax.smc.resampling)</a>
+</li>
       <li><a href="autoapi/blackjax/adaptation/base/index.html#blackjax.adaptation.base.return_all_adapt_info">return_all_adapt_info() (in module blackjax.adaptation.base)</a>
 </li>
       <li><a href="autoapi/blackjax/vi/meanfield_vi/index.html#blackjax.vi.meanfield_vi.MFVIState.rho">rho (MFVIState attribute)</a>
@@ -1824,6 +1926,8 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/smc/inner_kernel_tuning/index.html#blackjax.smc.inner_kernel_tuning.StateWithParameterOverride.sampler_state">sampler_state (StateWithParameterOverride attribute)</a>
 </li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.save_num">save_num (Adaptation attribute)</a>
+</li>
       <li><a href="autoapi/blackjax/vi/schrodinger_follmer/index.html#blackjax.vi.schrodinger_follmer.SchrodingerFollmerState">SchrodingerFollmerState (class in blackjax.vi.schrodinger_follmer)</a>
 </li>
       <li><a href="autoapi/blackjax/sgmcmc/diffusions/index.html#blackjax.sgmcmc.diffusions.sghmc">sghmc() (in module blackjax.sgmcmc.diffusions)</a>
@@ -1856,12 +1960,12 @@ document.write(`
         <li><a href="autoapi/blackjax/mcmc/proposal/index.html#blackjax.mcmc.proposal.Proposal.state">(Proposal attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/smc/inner_kernel_tuning/index.html#blackjax.smc.inner_kernel_tuning.StateWithParameterOverride">StateWithParameterOverride (class in blackjax.smc.inner_kernel_tuning)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/proposal/index.html#blackjax.mcmc.proposal.static_binomial_sampling">static_binomial_sampling() (in module blackjax.mcmc.proposal)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/mcmc/trajectory/index.html#blackjax.mcmc.trajectory.static_integration">static_integration() (in module blackjax.mcmc.trajectory)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.ChEESAdaptationState.step">step (ChEESAdaptationState attribute)</a>
@@ -1884,9 +1988,13 @@ document.write(`
         <li><a href="autoapi/blackjax/vi/schrodinger_follmer/index.html#blackjax.vi.schrodinger_follmer.step">(in module blackjax.vi.schrodinger_follmer)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.ChEESAdaptationState.step_size">step_size (ChEESAdaptationState attribute)</a>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState.step_count">step_count (AdaptationState attribute)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.AdaptationState.step_size">step_size (AdaptationState attribute)</a>, <a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.AdaptationState.step_size">[1]</a>
 
       <ul>
+        <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.ChEESAdaptationState.step_size">(ChEESAdaptationState attribute)</a>
+</li>
         <li><a href="autoapi/blackjax/adaptation/mclmc_adaptation/index.html#blackjax.adaptation.mclmc_adaptation.MCLMCAdaptationState.step_size">(MCLMCAdaptationState attribute)</a>
 </li>
         <li><a href="autoapi/blackjax/adaptation/meads_adaptation/index.html#blackjax.adaptation.meads_adaptation.MEADSAdaptationState.step_size">(MEADSAdaptationState attribute)</a>
@@ -1896,11 +2004,19 @@ document.write(`
         <li><a href="autoapi/blackjax/adaptation/window_adaptation/index.html#blackjax.adaptation.window_adaptation.WindowAdaptationState.step_size">(WindowAdaptationState attribute)</a>
 </li>
       </ul></li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.AdaptationState.steps_per_sample">steps_per_sample (AdaptationState attribute)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.AdaptationState.stepsize_adaptation_state">stepsize_adaptation_state (AdaptationState attribute)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.History.stopping">stopping (History attribute)</a>
+</li>
       <li><a href="autoapi/blackjax/smc/resampling/index.html#blackjax.smc.resampling.stratified">stratified() (in module blackjax.smc.resampling)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/elliptical_slice/index.html#blackjax.mcmc.elliptical_slice.EllipSliceInfo.subiter">subiter (EllipSliceInfo attribute)</a>
 </li>
       <li><a href="autoapi/blackjax/mcmc/proposal/index.html#blackjax.mcmc.proposal.Proposal.sum_log_p_accept">sum_log_p_accept (Proposal attribute)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.summary_statistics_fn">summary_statistics_fn() (Adaptation method)</a>, <a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.summary_statistics_fn">[1]</a>
 </li>
       <li><a href="autoapi/blackjax/smc/resampling/index.html#blackjax.smc.resampling.systematic">systematic() (in module blackjax.smc.resampling)</a>
 </li>
@@ -1960,16 +2076,22 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/smc/from_mcmc/index.html#blackjax.smc.from_mcmc.unshared_parameters_and_step_fn">unshared_parameters_and_step_fn() (in module blackjax.smc.from_mcmc)</a>
 </li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.Adaptation.update">update() (Adaptation method)</a>, <a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.update">[1]</a>
+</li>
       <li><a href="autoapi/blackjax/smc/base/index.html#blackjax.smc.base.update_and_take_last">update_and_take_last() (in module blackjax.smc.base)</a>
 </li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.update_history">update_history() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.update_history_scalar">update_history_scalar() (in module blackjax.adaptation.laps_burn_in)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/smc/persistent_sampling/index.html#blackjax.smc.persistent_sampling.PersistentStateInfo.update_info">update_info (PersistentStateInfo attribute)</a>
 
       <ul>
         <li><a href="autoapi/blackjax/smc/base/index.html#blackjax.smc.base.SMCInfo.update_info">(SMCInfo attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/blackjax/vi/svgd/index.html#blackjax.vi.svgd.update_median_heuristic">update_median_heuristic() (in module blackjax.vi.svgd)</a>
 </li>
       <li><a href="autoapi/blackjax/smc/pretuning/index.html#blackjax.smc.pretuning.update_parameter_distribution">update_parameter_distribution() (in module blackjax.smc.pretuning)</a>
@@ -2002,9 +2124,11 @@ document.write(`
 </li>
       <li><a href="autoapi/blackjax/adaptation/chees_adaptation/index.html#blackjax.adaptation.chees_adaptation.weighted_empirical_mean">weighted_empirical_mean() (in module blackjax.adaptation.chees_adaptation)</a>
 </li>
-      <li><a href="autoapi/blackjax/smc/partial_posteriors_path/index.html#blackjax.smc.partial_posteriors_path.PartialPosteriorsSMCState.weights">weights (PartialPosteriorsSMCState attribute)</a>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.History.weights">weights (History attribute)</a>
 
       <ul>
+        <li><a href="autoapi/blackjax/smc/partial_posteriors_path/index.html#blackjax.smc.partial_posteriors_path.PartialPosteriorsSMCState.weights">(PartialPosteriorsSMCState attribute)</a>
+</li>
         <li><a href="autoapi/blackjax/mcmc/periodic_orbital/index.html#blackjax.mcmc.periodic_orbital.PeriodicOrbitalState.weights">(PeriodicOrbitalState attribute)</a>
 </li>
         <li><a href="autoapi/blackjax/smc/base/index.html#blackjax.smc.base.SMCState.weights">(SMCState attribute)</a>
@@ -2017,6 +2141,10 @@ document.write(`
       <li><a href="autoapi/blackjax/adaptation/mass_matrix/index.html#blackjax.adaptation.mass_matrix.welford_algorithm">welford_algorithm() (in module blackjax.adaptation.mass_matrix)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/mass_matrix/index.html#blackjax.adaptation.mass_matrix.WelfordAlgorithmState">WelfordAlgorithmState (class in blackjax.adaptation.mass_matrix)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps_burn_in/index.html#blackjax.adaptation.laps_burn_in.Adaptation.while_cond">while_cond() (Adaptation method)</a>
+</li>
+      <li><a href="autoapi/blackjax/adaptation/laps/index.html#blackjax.adaptation.laps.while_steps_num">while_steps_num() (in module blackjax.adaptation.laps)</a>
 </li>
       <li><a href="autoapi/blackjax/adaptation/window_adaptation/index.html#blackjax.adaptation.window_adaptation.window_adaptation">window_adaptation() (in module blackjax.adaptation.window_adaptation)</a>
 </li>

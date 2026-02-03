@@ -188,6 +188,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/adjusted_mclmc_adaptation/index.html">blackjax.adaptation.adjusted_mclmc_adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/base/index.html">blackjax.adaptation.base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/chees_adaptation/index.html">blackjax.adaptation.chees_adaptation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/laps/index.html">blackjax.adaptation.laps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/laps_burn_in/index.html">blackjax.adaptation.laps_burn_in</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/mass_matrix/index.html">blackjax.adaptation.mass_matrix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/mclmc_adaptation/index.html">blackjax.adaptation.mclmc_adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../autoapi/blackjax/adaptation/meads_adaptation/index.html">blackjax.adaptation.meads_adaptation</a></li>
@@ -749,6 +751,36 @@ document.write(`
 
     <span class="k">return</span> <span class="n">nonans</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">kinetic_change</span></div>
 
+
+
+<span class="c1"># def handle_high_energy(</span>
+<span class="c1">#     previous_state, next_state, energy_change, key, inverse_mass_matrix, cutoff, euclidean=False</span>
+<span class="c1"># ):</span>
+
+
+<span class="c1">#     metric = metrics.default_metric(inverse_mass_matrix)</span>
+
+<span class="c1">#     new_momentum = jax.lax.cond(</span>
+<span class="c1">#         euclidean,</span>
+<span class="c1">#         lambda: metric.sample_momentum(key, previous_state.position),</span>
+<span class="c1">#         lambda: generate_unit_vector(key, previous_state.position),</span>
+<span class="c1">#     )</span>
+
+
+<span class="c1">#     # new_momentum = euclidean*metric.sample_momentum(key, previous_state.position) + (1-euclidean)*generate_unit_vector(key, previous_state.position)</span>
+<span class="c1">#     # new_momentum = generate_unit_vector(key, previous_state.position)</span>
+
+<span class="c1">#     state = jax.lax.cond(</span>
+<span class="c1">#         jnp.abs(energy_change) &gt; cutoff,</span>
+<span class="c1">#         lambda: previous_state._replace(</span>
+<span class="c1">#             # momentum=generate_unit_vector(key, next_state.position)</span>
+<span class="c1">#             momentum=new_momentum</span>
+<span class="c1">#         ),</span>
+<span class="c1">#         lambda: next_state,</span>
+<span class="c1">#     )</span>
+<span class="c1">#     energy_change = jnp.clip(energy_change, -cutoff, cutoff)</span>
+
+<span class="c1">#     return energy_change, state</span>
 </pre></div>
 
                 </article>
