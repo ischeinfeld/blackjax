@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+gf9b90f00a" />
+  <meta name="docsearch:version" content="0.1.dev1+g12580c160" />
   </head>
   
   
@@ -441,7 +441,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Infer the number of particles from the size of the leading dimension of</span>
     <span class="c1"># the first leaf of the inputted PyTree.</span>
-    <span class="n">num_particles</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_flatten</span><span class="p">(</span><span class="n">particles</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">num_particles</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">particles</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">weights</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">num_particles</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_particles</span>
     <span class="k">return</span> <span class="n">TemperedSMCState</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span></div>
 

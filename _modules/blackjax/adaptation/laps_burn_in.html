@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+gf9b90f00a" />
+  <meta name="docsearch:version" content="0.1.dev1+g12580c160" />
   </head>
   
   
@@ -498,9 +498,7 @@
 
         <span class="n">momentum</span><span class="p">,</span> <span class="n">unflatten</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">flatten_util</span><span class="o">.</span><span class="n">ravel_pytree</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">momentum</span><span class="p">)</span>
 
-        <span class="n">velocity_flat</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span>
-            <span class="k">lambda</span> <span class="n">sign</span><span class="p">,</span> <span class="n">u</span><span class="p">:</span> <span class="n">sign</span> <span class="o">*</span> <span class="n">u</span><span class="p">,</span> <span class="n">signs</span><span class="p">,</span> <span class="n">momentum</span>
-        <span class="p">)</span>
+        <span class="n">velocity_flat</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">sign</span><span class="p">,</span> <span class="n">u</span><span class="p">:</span> <span class="n">sign</span> <span class="o">*</span> <span class="n">u</span><span class="p">,</span> <span class="n">signs</span><span class="p">,</span> <span class="n">momentum</span><span class="p">)</span>
 
         <span class="n">velocity</span> <span class="o">=</span> <span class="n">unflatten</span><span class="p">(</span><span class="n">velocity_flat</span><span class="p">)</span>
 
@@ -623,9 +621,7 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">equipartition_diagonal</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Ei = E_ensemble (- grad log p_i x_i ). Ei is 1 if we have converged.</span>
 <span class="sd">    equipartition_loss = average over parameters (Ei)&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span>
-        <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span> <span class="o">*</span> <span class="n">g</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">logdensity_grad</span>
-    <span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span> <span class="o">*</span> <span class="n">g</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">logdensity_grad</span><span class="p">)</span></div>
 
 
 

@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+gf9b90f00a" />
+  <meta name="docsearch:version" content="0.1.dev1+g12580c160" />
   </head>
   
   
@@ -585,20 +585,20 @@
         <span class="p">)</span> <span class="o">*</span> <span class="n">log_step_size_ma</span> <span class="o">+</span> <span class="n">update_weight</span> <span class="o">*</span> <span class="n">new_log_step_size</span>
 
         <span class="n">w</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">is_divergent</span><span class="p">,</span> <span class="n">acceptance_probabilities</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-        <span class="n">proposals_mean</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span>
+        <span class="n">proposals_mean</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">weighted_empirical_mean</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">w</span><span class="p">),</span> <span class="n">proposed_positions</span>
         <span class="p">)</span>
         <span class="c1"># The above weighted mean is presumably better than the simple mean:</span>
-        <span class="c1"># proposals_mean = jax.tree_util.tree_map(</span>
+        <span class="c1"># proposals_mean = jax.tree.map(</span>
         <span class="c1">#     lambda p: jnp.nanmean(p, axis=0), proposed_positions</span>
         <span class="c1"># )</span>
-        <span class="n">initials_mean</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span>
+        <span class="n">initials_mean</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">initial_positions</span>
         <span class="p">)</span>
-        <span class="n">proposals_centered</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span>
+        <span class="n">proposals_centered</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">pm</span><span class="p">:</span> <span class="n">p</span> <span class="o">-</span> <span class="n">pm</span><span class="p">,</span> <span class="n">proposed_positions</span><span class="p">,</span> <span class="n">proposals_mean</span>
         <span class="p">)</span>
-        <span class="n">initials_centered</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span>
+        <span class="n">initials_centered</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">pm</span><span class="p">:</span> <span class="n">p</span> <span class="o">-</span> <span class="n">pm</span><span class="p">,</span> <span class="n">initial_positions</span><span class="p">,</span> <span class="n">initials_mean</span>
         <span class="p">)</span>
 
@@ -625,7 +625,7 @@
             <span class="n">trajectory_gradient</span><span class="p">,</span> <span class="n">optim_state</span><span class="p">,</span> <span class="n">log_trajectory_length</span>
         <span class="p">)</span>
 
-        <span class="n">updates</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span>
+        <span class="n">updates</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="o">-</span><span class="n">LOG_UPDATE_CLIP</span><span class="p">,</span> <span class="n">LOG_UPDATE_CLIP</span><span class="p">),</span> <span class="n">updates</span>
         <span class="p">)</span>
         <span class="n">log_trajectory_length_</span> <span class="o">=</span> <span class="n">optax</span><span class="o">.</span><span class="n">apply_updates</span><span class="p">(</span><span class="n">log_trajectory_length</span><span class="p">,</span> <span class="n">updates</span><span class="p">)</span>
@@ -810,8 +810,8 @@
         <span class="n">max_sampling_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span>
-            <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_flatten</span><span class="p">(</span>
-                <span class="n">jax</span><span class="o">.</span><span class="n">tree_util</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">num_chains</span><span class="p">,</span> <span class="n">positions</span><span class="p">)</span>
+            <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span>
+                <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">num_chains</span><span class="p">,</span> <span class="n">positions</span><span class="p">)</span>
             <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
         <span class="p">),</span> <span class="s2">&quot;initial `positions` leading dimension must be equal to the `num_chains`&quot;</span>
         <span class="n">num_dim</span> <span class="o">=</span> <span class="n">pytree_size</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span> <span class="o">//</span> <span class="n">num_chains</span>
