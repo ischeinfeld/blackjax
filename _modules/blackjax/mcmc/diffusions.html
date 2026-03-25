@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+g03091d0ca" />
+  <meta name="docsearch:version" content="0.1.dev1+g3f76103e5" />
   </head>
   
   
@@ -401,7 +401,18 @@
 <div class="viewcode-block" id="overdamped_langevin">
 <a class="viewcode-back" href="../../../autoapi/blackjax/mcmc/diffusions/index.html#blackjax.mcmc.diffusions.overdamped_langevin">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">overdamped_langevin</span><span class="p">(</span><span class="n">logdensity_grad_fn</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Euler solver for overdamped Langevin diffusion.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Euler solver for overdamped Langevin diffusion.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    logdensity_grad_fn</span>
+<span class="sd">        A function that returns a ``(logdensity, logdensity_grad)`` tuple given</span>
+<span class="sd">        a position and optional batch arguments.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    A ``one_step`` function that advances the diffusion by one Euler step.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">one_step</span><span class="p">(</span><span class="n">rng_key</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">DiffusionState</span><span class="p">,</span> <span class="n">step_size</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">batch</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
         <span class="n">position</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">logdensity_grad</span> <span class="o">=</span> <span class="n">state</span>

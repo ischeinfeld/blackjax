@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+g03091d0ca" />
+  <meta name="docsearch:version" content="0.1.dev1+g3f76103e5" />
   </head>
   
   
@@ -463,12 +463,15 @@
 <span class="sd">    Propose a new position such that its distance to the current position is</span>
 <span class="sd">    normally distributed. Suitable for continuous variables.</span>
 
-<span class="sd">    Parameter</span>
-<span class="sd">    ---------</span>
-<span class="sd">    sigma:</span>
-<span class="sd">        vector or matrix that contains the standard deviation of the centered</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    sigma</span>
+<span class="sd">        Vector or matrix that contains the standard deviation of the centered</span>
 <span class="sd">        normal distribution from which we draw the move proposals.</span>
 
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    A callable that takes a PRNGKey and a position and returns a proposed move.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">jnp</span><span class="o">.</span><span class="n">ndim</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;sigma must be a vector or a matrix.&quot;</span><span class="p">)</span>
@@ -487,7 +490,7 @@
 
 <span class="sd">    position</span>
 <span class="sd">        Current position of the chain.</span>
-<span class="sd">    log_density</span>
+<span class="sd">    logdensity</span>
 <span class="sd">        Current value of the log-density</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -542,12 +545,15 @@
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    position: PyTree</span>
-<span class="sd">        The initial position of the chain</span>
-<span class="sd">    logdensity_fn: Callable</span>
+<span class="sd">    position</span>
+<span class="sd">        The initial position of the chain.</span>
+<span class="sd">    logdensity_fn</span>
 <span class="sd">        Log-probability density function of the distribution we wish to sample</span>
 <span class="sd">        from.</span>
 
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    The initial state of the RW chain.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">RWState</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">logdensity_fn</span><span class="p">(</span><span class="n">position</span><span class="p">))</span>
 

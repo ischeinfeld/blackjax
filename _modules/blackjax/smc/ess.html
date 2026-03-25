@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+g03091d0ca" />
+  <meta name="docsearch:version" content="0.1.dev1+g3f76103e5" />
   </head>
   
   
@@ -459,12 +459,12 @@
 <span class="sd">        The increment that solves for the target ESS.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">logprob</span> <span class="o">=</span> <span class="n">logdensity_fn</span><span class="p">(</span><span class="n">particles</span><span class="p">)</span>
-    <span class="n">n_particles</span> <span class="o">=</span> <span class="n">logprob</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">logdensity</span> <span class="o">=</span> <span class="n">logdensity_fn</span><span class="p">(</span><span class="n">particles</span><span class="p">)</span>
+    <span class="n">n_particles</span> <span class="o">=</span> <span class="n">logdensity</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">target_val</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n_particles</span> <span class="o">*</span> <span class="n">target_ess</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">fun_to_solve</span><span class="p">(</span><span class="n">delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">Array</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Array</span><span class="p">:</span>
-        <span class="n">log_weights</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span> <span class="o">*</span> <span class="n">logprob</span><span class="p">)</span>
+        <span class="n">log_weights</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span> <span class="o">*</span> <span class="n">logdensity</span><span class="p">)</span>
         <span class="n">ess_val</span> <span class="o">=</span> <span class="n">log_ess</span><span class="p">(</span><span class="n">log_weights</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">ess_val</span> <span class="o">-</span> <span class="n">target_val</span>

@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+g03091d0ca" />
+  <meta name="docsearch:version" content="0.1.dev1+g3f76103e5" />
   </head>
   
   
@@ -434,7 +434,20 @@
     <span class="o">*</span><span class="n">optimizer_args</span><span class="p">,</span>
     <span class="o">**</span><span class="n">optimizer_kwargs</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MFVIState</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the mean-field VI state.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the mean-field VI state.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    position</span>
+<span class="sd">        Reference PyTree used to infer shapes; mean is initialized to zero,</span>
+<span class="sd">        log-scale ``rho`` to ``-2``.</span>
+<span class="sd">    optimizer</span>
+<span class="sd">        Optax optimizer whose state is initialized here.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Initial MFVIState with zero mean, rho=-2, and optimizer state.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">mu</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
     <span class="n">rho</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">jnp</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">position</span><span class="p">)</span>
     <span class="n">opt_state</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">init</span><span class="p">((</span><span class="n">mu</span><span class="p">,</span> <span class="n">rho</span><span class="p">))</span>
@@ -457,21 +470,25 @@
 <span class="sd">    ----------</span>
 <span class="sd">    rng_key</span>
 <span class="sd">        Key for JAX&#39;s pseudo-random number generator.</span>
-<span class="sd">    init_state</span>
-<span class="sd">        Initial state of the mean-field approximation.</span>
+<span class="sd">    state</span>
+<span class="sd">        Current state of the mean-field approximation.</span>
 <span class="sd">    logdensity_fn</span>
 <span class="sd">        Function that represents the target log-density to approximate.</span>
 <span class="sd">    optimizer</span>
-<span class="sd">        Optax `GradientTransformation` to be used for optimization.</span>
+<span class="sd">        Optax ``GradientTransformation`` to be used for optimization.</span>
 <span class="sd">    num_samples</span>
 <span class="sd">        The number of samples that are taken from the approximation</span>
 <span class="sd">        at each step to compute the Kullback-Leibler divergence between</span>
 <span class="sd">        the approximation and the target log-density.</span>
 <span class="sd">    stl_estimator</span>
-<span class="sd">        Whether to use stick-the-landing (STL) gradient estimator :cite:p:`roeder2017sticking` for gradient estimation.</span>
-<span class="sd">        The STL estimator has lower gradient variance by removing the score function term</span>
-<span class="sd">        from the gradient. It is suggested by :cite:p:`agrawal2020advances` to always keep it in order for better results.</span>
+<span class="sd">        Whether to use the stick-the-landing (STL) gradient estimator</span>
+<span class="sd">        :cite:p:`roeder2017sticking`. The STL estimator has lower gradient</span>
+<span class="sd">        variance by removing the score function term from the gradient.</span>
+<span class="sd">        :cite:p:`agrawal2020advances` recommend keeping it enabled.</span>
 
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Updated MFVIState and MFVIInfo containing the ELBO value.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">parameters</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">rho</span><span class="p">)</span>
@@ -497,7 +514,21 @@
 <div class="viewcode-block" id="sample">
 <a class="viewcode-back" href="../../../autoapi/blackjax/vi/meanfield_vi/index.html#blackjax.vi.meanfield_vi.sample">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="n">rng_key</span><span class="p">:</span> <span class="n">PRNGKey</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">MFVIState</span><span class="p">,</span> <span class="n">num_samples</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Sample from the mean-field approximation.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Sample from the mean-field approximation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    rng_key</span>
+<span class="sd">        Key for JAX&#39;s pseudo-random number generator.</span>
+<span class="sd">    state</span>
+<span class="sd">        Current MFVIState containing the variational parameters.</span>
+<span class="sd">    num_samples</span>
+<span class="sd">        Number of samples to draw.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    A PyTree of samples with leading dimension ``num_samples``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_sample</span><span class="p">(</span><span class="n">rng_key</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">rho</span><span class="p">,</span> <span class="n">num_samples</span><span class="p">)</span></div>
 
 

@@ -52,7 +52,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+g03091d0ca" />
+  <meta name="docsearch:version" content="0.1.dev1+g3f76103e5" />
   </head>
   
   
@@ -453,7 +453,7 @@
 <div class="viewcode-block" id="default_metric">
 <a class="viewcode-back" href="../../../autoapi/blackjax/mcmc/metrics/index.html#blackjax.mcmc.metrics.default_metric">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">default_metric</span><span class="p">(</span><span class="n">metric</span><span class="p">:</span> <span class="n">MetricTypes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Metric</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert an input metric into a ``Metric`` object following sensible default rules</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert an input metric into a ``Metric`` object following sensible default rules.</span>
 
 <span class="sd">    The metric can be specified in three different ways:</span>
 
@@ -462,6 +462,11 @@
 <span class="sd">      metric</span>
 <span class="sd">    - A function that takes a coordinate position and returns the mass matrix at that</span>
 <span class="sd">      location</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    A ``Metric`` object with ``sample_momentum``, ``kinetic_energy``,</span>
+<span class="sd">    ``check_turning``, and ``scale`` fields.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">metric</span><span class="p">,</span> <span class="n">Metric</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">metric</span>
@@ -613,6 +618,20 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">gaussian_riemannian</span><span class="p">(</span>
     <span class="n">mass_matrix_fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Metric</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Hamiltonian dynamic on Riemannian manifold with normally-distributed momentum.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mass_matrix_fn</span>
+<span class="sd">        A callable that takes a position and returns the mass matrix at that</span>
+<span class="sd">        location (positive definite, one or two-dimensional array).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    A ``Metric`` object with ``sample_momentum``, ``kinetic_energy``,</span>
+<span class="sd">    ``check_turning``, and ``scale`` fields.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span><span class="w"> </span><span class="nf">momentum_generator</span><span class="p">(</span><span class="n">rng_key</span><span class="p">:</span> <span class="n">PRNGKey</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">ArrayLikeTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ArrayLikeTree</span><span class="p">:</span>
         <span class="n">mass_matrix</span> <span class="o">=</span> <span class="n">mass_matrix_fn</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
         <span class="n">mass_matrix_sqrt</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="n">_format_covariance</span><span class="p">(</span><span class="n">mass_matrix</span><span class="p">,</span> <span class="n">is_inv</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

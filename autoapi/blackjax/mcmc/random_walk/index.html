@@ -56,7 +56,7 @@
     <link rel="prev" title="blackjax.mcmc.proposal" href="../proposal/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+g03091d0ca" />
+  <meta name="docsearch:version" content="0.1.dev1+g3f76103e5" />
   </head>
   
   
@@ -508,14 +508,15 @@ See ‘Metropolis Algorithm’ in [1].</p>
 <dd><p>Normal Random Walk proposal.</p>
 <p>Propose a new position such that its distance to the current position is
 normally distributed. Suitable for continuous variables.</p>
-<section id="parameter">
-<h3>Parameter<a class="headerlink" href="#parameter" title="Link to this heading">#</a></h3>
-<dl class="simple">
-<dt>sigma:</dt><dd><p>vector or matrix that contains the standard deviation of the centered
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sigma</strong> – Vector or matrix that contains the standard deviation of the centered
 normal distribution from which we draw the move proposals.</p>
 </dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>A callable that takes a PRNGKey and a position and returns a proposed move.</p>
+</dd>
 </dl>
-</section>
 </dd></dl>
 
 <dl class="py class">
@@ -525,7 +526,7 @@ normal distribution from which we draw the move proposals.</p>
 <dl class="simple">
 <dt>position</dt><dd><p>Current position of the chain.</p>
 </dd>
-<dt>log_density</dt><dd><p>Current value of the log-density</p>
+<dt>logdensity</dt><dd><p>Current value of the log-density</p>
 </dd>
 </dl>
 <dl class="py attribute">

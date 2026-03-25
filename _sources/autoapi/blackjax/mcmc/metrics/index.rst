@@ -38,7 +38,7 @@ Module Contents
 
 .. py:function:: default_metric(metric: MetricTypes) -> Metric
 
-   Convert an input metric into a ``Metric`` object following sensible default rules
+   Convert an input metric into a ``Metric`` object following sensible default rules.
 
    The metric can be specified in three different ways:
 
@@ -47,6 +47,9 @@ Module Contents
      metric
    - A function that takes a coordinate position and returns the mass matrix at that
      location
+
+   :returns: * A ``Metric`` object with ``sample_momentum``, ``kinetic_energy``,
+             * ``check_turning``, and ``scale`` fields.
 
 
 .. py:function:: gaussian_euclidean(inverse_mass_matrix: blackjax.types.Array) -> Metric
@@ -76,4 +79,13 @@ Module Contents
 
 
 .. py:function:: gaussian_riemannian(mass_matrix_fn: Callable) -> Metric
+
+   Hamiltonian dynamic on Riemannian manifold with normally-distributed momentum.
+
+   :param mass_matrix_fn: A callable that takes a position and returns the mass matrix at that
+                          location (positive definite, one or two-dimensional array).
+
+   :returns: * A ``Metric`` object with ``sample_momentum``, ``kinetic_energy``,
+             * ``check_turning``, and ``scale`` fields.
+
 
