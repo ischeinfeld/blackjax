@@ -14,7 +14,7 @@ from .diagnostics import effective_sample_size as ess
 from .diagnostics import potential_scale_reduction as rhat
 from .mcmc import adjusted_mclmc as _adjusted_mclmc
 from .mcmc import adjusted_mclmc_dynamic as _adjusted_mclmc_dynamic
-from .mcmc import barker
+from .mcmc import barker as _barker
 from .mcmc import dynamic_hmc as _dynamic_hmc
 from .mcmc import elliptical_slice as _elliptical_slice
 from .mcmc import ghmc as _ghmc
@@ -119,7 +119,8 @@ adjusted_mclmc_dynamic = generate_top_level_api_from(_adjusted_mclmc_dynamic)
 adjusted_mclmc = generate_top_level_api_from(_adjusted_mclmc)
 elliptical_slice = generate_top_level_api_from(_elliptical_slice)
 ghmc = generate_top_level_api_from(_ghmc)
-barker_proposal = generate_top_level_api_from(barker)
+barker = generate_top_level_api_from(_barker)
+barker_proposal = barker  # backwards-compatible alias
 
 hmc_family = [hmc, nuts]
 
